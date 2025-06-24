@@ -1,0 +1,40 @@
+{
+    "name": "TradingView Alert Sound",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "scripting",
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://www.tradingview.com/*"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.tradingview.com/*"
+            ],
+            "js": [
+                "content-loader.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "injector.js"
+            ],
+            "matches": [
+                "https://www.tradingview.com/*"
+            ]
+        }
+    ]
+}
