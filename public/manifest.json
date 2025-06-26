@@ -3,8 +3,7 @@
     "version": "1.0",
     "manifest_version": 3,
     "permissions": [
-        "storage",
-        "tabs"
+        "storage"
     ],
     "host_permissions": [
         "https://www.tradingview.com/*"
